@@ -77,6 +77,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
     private boolean enableRotationGesture = false;
     private boolean disableCropperColorSetters = false;
     private ReadableMap options;
+    private boolean showCropFrame = false;
 
     //Grey 800
     private final String DEFAULT_TINT = "#424242";
@@ -132,6 +133,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
         hideBottomControls = options.hasKey("hideBottomControls") ? options.getBoolean("hideBottomControls") : hideBottomControls;
         enableRotationGesture = options.hasKey("enableRotationGesture") ? options.getBoolean("enableRotationGesture") : enableRotationGesture;
         disableCropperColorSetters = options.hasKey("disableCropperColorSetters") ? options.getBoolean("disableCropperColorSetters") : disableCropperColorSetters;
+        showCropFrame = options.hasKey("showCropFrame") ? options.getBoolean("showCropFrame") : showCropFrame;
         this.options = options;
     }
 
@@ -595,6 +597,7 @@ class PickerModule extends ReactContextBaseJavaModule implements ActivityEventLi
         options.setFreeStyleCropEnabled(freeStyleCropEnabled);
         options.setShowCropGrid(showCropGuidelines);
         options.setHideBottomControls(hideBottomControls);
+        options.setShowCropFrame(showCropFrame);
         if (cropperToolbarTitle != null) {
             options.setToolbarTitle(cropperToolbarTitle);
         }
