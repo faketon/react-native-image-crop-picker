@@ -30,6 +30,7 @@ declare module "react-native-image-crop-picker" {
         enableRotationGesture?: boolean;
         cropperCancelText?: string;
         cropperChooseText?: string;
+        showCropFrame?: boolean;
     }
 
     export interface Image {
